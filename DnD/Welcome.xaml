@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="DnD.Welcome">
+	<ContentPage.Content>
+		<Grid Margin="30">
+			<Grid.RowDefinitions>
+			    <RowDefinition Height="5*" />
+			    <RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+			    <ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<Image Source="Logo.png" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0"/>
+			<Label Text="Dračák" Grid.Row="1" Grid.Column="0" 
+					HorizontalTextAlignment="Center"
+					FontSize="25"
+					FontAttributes="Italic"
+					FontFamily="LobsterTwo"
+
+					/>
+			<Button Text="Vstoupit" Grid.Row="2" Grid.Column="0" x:Name="button" Clicked="start"/>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="DnD.Games">
+	<ContentPage.Content>
+		
+		<Grid Margin="10">
+			<Grid.ColumnDefinitions >
+				<ColumnDefinition Width="*"/>
+	    	</Grid.ColumnDefinitions>
+				
+	    	<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="5*"/>
+	    	</Grid.RowDefinitions>
+
+			<Grid Grid.Row="0" Grid.Column="0">
+				    <Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+				    </Grid.RowDefinitions>
+				    <Grid.ColumnDefinitions>
+						<ColumnDefinition Width="4*"/>
+						<ColumnDefinition Width="*"/>
+				    </Grid.ColumnDefinitions>
+
+					<Label Text="Uložené" FontSize="25" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+					<Button Clicked="add" FontSize="20" Text="Noví hráč (+)" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" />
+			</Grid>	
+			
+		
+			<ListView x:Name="StoriesList" Grid.Row="1" Grid.Column="0" ItemTapped="StoriesSelect">
+			    <ListView.ItemTemplate >
+					<DataTemplate >
+					    <ViewCell>
+						    <Grid>
+							    <Grid.RowDefinitions>
+									<RowDefinition Height="*"/>
+							    </Grid.RowDefinitions>
+							    <Grid.ColumnDefinitions>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="*"/>
+							    </Grid.ColumnDefinitions>
+
+								<Label Text="{Binding Name}" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+								<Label Text="{Binding CreateTime}" FontSize="12" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="End" HorizontalTextAlignment="Center" />	
+
+								
+							</Grid>					 
+					    </ViewCell>
+					</DataTemplate>
+			    </ListView.ItemTemplate>
+ 			</ListView>
+			
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>
+
