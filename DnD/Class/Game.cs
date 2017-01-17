@@ -6,7 +6,7 @@ namespace DnD
 		private string name;
 		private string owner;
 		private DateTime createTime;
-		private int[,] story;
+		private int time;
 
 		public Game()
 		{
@@ -38,18 +38,6 @@ namespace DnD
 			}
 		}
 
-		public int[,] Story
-		{
-			get
-			{
-				return story;
-			}
-
-			set
-			{
-				story = value;
-			}
-		}
 
 		public string Owner
 		{
@@ -61,6 +49,19 @@ namespace DnD
 			set
 			{
 				owner = value;
+			}
+		}
+
+		public int Time
+		{
+			get
+			{
+				return time;
+			}
+
+			set
+			{
+				time = value;
 			}
 		}
 	}

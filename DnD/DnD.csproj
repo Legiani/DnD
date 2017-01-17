@@ -38,6 +38,15 @@
     <EmbeddedResource Include="Games.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainStory.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainArena.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainInfo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -56,6 +65,16 @@
     <Compile Include="Class\Game.cs" />
     <Compile Include="Class\Characters\AEntity.cs" />
     <Compile Include="Class\Characters\User.cs" />
+    <Compile Include="MainStory.xaml.cs">
+      <DependentUpon>MainStory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainArena.xaml.cs">
+      <DependentUpon>MainArena.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Characters\Monster.cs" />
+    <Compile Include="MainInfo.xaml.cs">
+      <DependentUpon>MainInfo.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

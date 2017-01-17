@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			x:Class="DnD.MainStory">
+	<ContentPage.Content>
+		 <StackLayout>
+			<Label Text="Vítej ve Vodňanech" HorizontalOptions="Center" FontSize="30" FontFamily="Didot" FontAttributes="Bold" Margin="0,20,0,0"/>
+			<Label Text="Player" HorizontalOptions="Center" FontSize="12" FontFamily="Didot" Margin="0,-5,0,10" x:Name="player"/>
+<!--			<AbsoluteLayout Margin="0,270,0,0">-->
+
+<!--		    	<Image  Source="main_story.png" AbsoluteLayout.LayoutBounds=".5,.63,1,4" AbsoluteLayout.LayoutFlags="All"/>	-->
+				<Button Clicked="shop" FontSize="25" Text="Obchod" FontFamily="Didot" FontAttributes="Bold" TextColor="Black" />
+<!--					AbsoluteLayout.LayoutBounds="180,-20,250,100" -->
+				<Button Clicked="expedition" FontSize="25" Text="Vyprava" FontFamily="Didot" FontAttributes="Bold" TextColor="Black"/>
+<!--					AbsoluteLayout.LayoutBounds="40,240,250,100"  -->
+				<Button Clicked="arena" FontSize="25" Text="Arena" FontFamily="Didot" FontAttributes="Bold" TextColor="Black" />
+<!--					AbsoluteLayout.LayoutBounds="-23,-200,250,100"  -->
+				<Button Clicked="games" FontSize="25" Text="Menu" FontFamily="Didot" FontAttributes="Bold" TextColor="Black" />
+<!--					AbsoluteLayout.LayoutBounds="190, 200,250,100"  -->
+
+<!--		  	</AbsoluteLayout>-->
+		 </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -8,7 +8,8 @@ namespace DnD
 
 		public override string ToString()
 		{
-			return win + " " + lost + " " + life + " " + name;
+			return win + " " + lost + " " + life + " " + name+ "" + attack + "" + defense;
 		}
+
 	}
 }

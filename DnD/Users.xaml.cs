@@ -49,15 +49,17 @@ namespace DnD
 		//	return _jsonHelper.DeserializeObject(dataFromFile);
 		//}
 
-		public void PlayerSelect(object sender, ItemTappedEventArgs args)
+		public async void PlayerSelect(object sender, ItemTappedEventArgs args)
 		{
 			var user = args.Item as User;
-			this.Navigation.PushModalAsync(new Games(user));
+			await Navigation.PushModalAsync(new Games(user));
 		}
+
+
 
 		public void add(object sender, EventArgs args)
 		{
-			this.Navigation.PushModalAsync(new Welcome());
+			this.Navigation.PushAsync(new Welcome());
 		}
 
 	}

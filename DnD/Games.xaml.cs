@@ -11,6 +11,7 @@ public partial class Games : ContentPage
 		//readonly JsonHelper _jsonHelper = new JsonHelper();
 
 		User user;
+		Game game;
 
 		public Games(User user)
 		{
@@ -24,6 +25,7 @@ public partial class Games : ContentPage
 			//ReadAndWriteData(dataToWrite);
 
 			this.user = user;
+
 		}
 
 		private List<Game> CreateSampleData(string owner)
@@ -35,8 +37,8 @@ public partial class Games : ContentPage
 								{ 1, 3 }
 							  };
 
-			story.Add(new Game() { Owner = owner, Name = "Derpice", Story = storryID, CreateTime = new DateTime() });
-			story.Add(new Game() { Owner = owner, Name = "Startov", Story = storryID, CreateTime = new DateTime() });
+			story.Add(new Game() { Owner = owner, Name = "Derpice", Time = 4, CreateTime = new DateTime() });
+			story.Add(new Game() { Owner = owner, Name = "Startov", Time = 8, CreateTime = new DateTime() });
 			return story;
 		}
 
@@ -62,8 +64,8 @@ public partial class Games : ContentPage
 
 		public void StoriesSelect(object sender, ItemTappedEventArgs args)
 		{
-			var user = args.Item as Game;
-			this.Navigation.PushModalAsync(new Welcome());
+			Game game = args.Item as Game;
+			this.Navigation.PushModalAsync(new MainStory(user, game));
 		}
 
 		public void add(object sender, EventArgs args)
