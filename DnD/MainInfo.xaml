@@ -1,73 +1,47 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DnD.MainInfo">
 	<ContentPage.Content>
 		<Grid>
 				    <Grid.RowDefinitions>
 						<RowDefinition Height="*"/>
-						<RowDefinition Height="*"/>
-						<RowDefinition Height="2*"/>
+						<RowDefinition Height="0.4*"/>
+						<RowDefinition Height="3*"/>
 						<RowDefinition Height="*"/>
 				    </Grid.RowDefinitions>
 				    <Grid.ColumnDefinitions>
 						<ColumnDefinition Width="*"/>
 				    </Grid.ColumnDefinitions>
 
-					<Label Text="Arena" FontSize="30" FontFamily="Didot" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-
-					<Grid Grid.Row="1" Grid.Column="0">
-					    <Grid.RowDefinitions>
-							<RowDefinition Height="0.5*"/>
-							<RowDefinition Height="0.3*"/>
-					    </Grid.RowDefinitions>
-					    <Grid.ColumnDefinitions>
-							<ColumnDefinition Width="*"/>
-							<ColumnDefinition Width="*"/>
-					    </Grid.ColumnDefinitions>
-
-						<Label Text="Utočník" FontSize="25" FontFamily="Didot"  Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-						<Label Text="Obránce" FontSize="25" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-						<Label Text="xxx" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="player"/>
-						<Label Text="yyy" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="monster1"/>
-					
-					</Grid>	
-
+					<Label Text="Info" FontSize="30" FontFamily="Didot" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="result"/>
+					<Label Text="xxx" FontSize="25" FontFamily="Didot" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="player"/>
 					<Grid Grid.Row="2" Grid.Column="0">
 					    <Grid.RowDefinitions>
 							<RowDefinition Height="*"/>
 							<RowDefinition Height="*"/>
 							<RowDefinition Height="*"/>
-					    </Grid.RowDefinitions>
-					    <Grid.ColumnDefinitions>
-							<ColumnDefinition Width="*"/>
-							<ColumnDefinition Width="*"/>
-							<ColumnDefinition Width="*"/>
-					    </Grid.ColumnDefinitions>
-
-						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_defense"/>
-						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_life"/>
-						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_attack"/>
-
-						<Label Text="Životy" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-						<Label Text="Obrana" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-						<Label Text="Útok" FontSize="20" FontFamily="Didot"  Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />						
-
-						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="m_defense"/>
-						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="m_life"/>
-						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="2" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="m_attack" />
-					</Grid>
-
-					<Grid Grid.Row="3" Grid.Column="0">
-					    <Grid.RowDefinitions>
 							<RowDefinition Height="*"/>
 					    </Grid.RowDefinitions>
 					    <Grid.ColumnDefinitions>
+
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="*"/>
 					    </Grid.ColumnDefinitions>
 
-						<Button Clicked="attack" Text="Útok" FontSize="25" FontFamily="Didot"  Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-						<Button Clicked="defense" Text="Obrana" FontSize="25" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-					</Grid>	
+						<Label Text="Životy" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+						<Label Text="Obrana" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+						<Label Text="Útok" FontSize="20" FontFamily="Didot"  Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />						
+						<Label Text="Měšec" FontSize="20" FontFamily="Didot"  Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+
+						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_defense"/>
+						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_life"/>
+						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_attack"/>
+						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_money"/>
+
+					</Grid>
+
+					<Button Clicked="menu" Text="Menu" FontSize="25" FontFamily="Didot"  Grid.Row="3" Grid.Column="0" />
+					
 			</Grid>	
 	</ContentPage.Content>
 </ContentPage>

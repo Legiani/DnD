@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DnD.MainExpedition">
+	<ContentPage.Content>
+		<Grid>
+			    <Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+			    </Grid.RowDefinitions>
+			    <Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+			    </Grid.ColumnDefinitions>
+
+				<Label Text="Obchod" FontSize="30" FontFamily="Didot" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="result"/>
+				<Label Text="Bez 'Stopařova pruvodce po Kralovství' nemužeš opusti město :-(" FontSize="25" FontFamily="Didot" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="player"/>
+			
+
+				<Button Clicked="menu" Text="Menu" FontSize="25" FontFamily="Didot"  Grid.Row="2" Grid.Column="0" />
+				
+		</Grid>	
+	</ContentPage.Content>
+</ContentPage>

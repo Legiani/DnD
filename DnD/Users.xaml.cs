@@ -25,7 +25,7 @@ namespace DnD
 		{
 			List<User> persons = new List<User>();
 			persons.Add(new User() { name = "Bára", attack = 3, defense = 85, life = 6, money = 50, lost = 6, win = 12 });
-			persons.Add(new User() { name = "Kuba", attack = 5, defense = 55, life = 4, money = 130, lost = 2, win = 22 });
+			persons.Add(new User() { name = "Kuba", attack = 30, defense = 55, life = 4, money = 130, lost = 2, win = 22 });
 			return persons;
 		}
 

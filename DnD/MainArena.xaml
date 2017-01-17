@@ -47,8 +47,8 @@
 						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_life"/>
 						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_attack"/>
 
-						<Label Text="Životy" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-						<Label Text="Obrana" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+						<Label Text="Obrana" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+						<Label Text="Životy" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
 						<Label Text="Útok" FontSize="20" FontFamily="Didot"  Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />						
 
 						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="m_defense"/>
@@ -65,8 +65,8 @@
 							<ColumnDefinition Width="*"/>
 					    </Grid.ColumnDefinitions>
 
-						<Button Clicked="attack" Text="Útok" FontSize="25" FontFamily="Didot"  Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-						<Button Clicked="defense" Text="Obrana" FontSize="25" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+						<Button Clicked="attack" Text="Útok" FontSize="25" FontFamily="Didot"  Grid.Row="0" Grid.Column="0" />
+						<Button Clicked="defense" Text="Obrana" FontSize="25" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" />
 					</Grid>	
 			</Grid>	
 	</ContentPage.Content>

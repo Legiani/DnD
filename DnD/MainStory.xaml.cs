@@ -21,25 +21,28 @@ namespace DnD
 			player.Text = user.name;
 		}
 
-		public void expedition(object sender, EventArgs args)
+
+		public async void expedition(object sender, EventArgs args)
 		{
 			
-			Navigation.PushAsync(new Games(user));
+			await Navigation.PushAsync(new MainExpedition(user));
 		}
 
-		public void arena(object sender, EventArgs args)
+		public async void arena(object sender, EventArgs args)
 		{
-			Navigation.PushAsync(new MainArena(user));
+			await Navigation.PushModalAsync(new MainArena(user));
 		}
 
-		public void games(object sender, EventArgs args)
+		public async void games(object sender, EventArgs args)
 		{
-			Navigation.PushAsync(new Games(user));
+			await Navigation.PushModalAsync(new Games(user));
 		}
 
-		public void shop(object sender, EventArgs args)
+		public async void shop(object sender, EventArgs args)
 		{
-			Navigation.PushAsync(new Games(user));
+			await Navigation.PushAsync(new MainShop(user));
 		}
+
+
 	}
 }

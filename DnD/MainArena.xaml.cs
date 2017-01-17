@@ -8,46 +8,54 @@ namespace DnD
 	public partial class MainArena : ContentPage
 	{
 		User user;
-
+		int loop;
 		Monster monster;
-
+		int def;
 		public MainArena(User user)
 		{
 			InitializeComponent();
 			this.user = user;
 
+			def = user.defense;
 			monster = new Monster() { name=randomName(), attack=random(user.attack-10), defense=random(user.defense - 10), life=random(0,1,3), money=random(0,2,5) };
-
+			fill();
 
 		}
 		public void fill() {
 			monster1.Text = monster.name;
 			player.Text = user.name;
 
-			p_life.Text = user.life;
+			p_life.Text = "" + user.life;
+			p_attack.Text = "" + user.attack;
+			p_defense.Text = "" + user.defense;
 
-			m_life.Text = monster.life;
-			m_attack.Text = monster.attack;
-			m_defense.Text = monster.defense;
+			m_life.Text = "" + monster.life;
+			m_attack.Text = "" + monster.attack;
+			m_defense.Text = "" + monster.defense;
 
 		}
 
-		public void attack(object sender, EventArgs args)
+		public async void attack(object sender, EventArgs args)
 		{
-			if (random(0, 0, 1) == 1)
+			loop = loop + 1;
+			if (random(0, 0, 1) == 1 || loop % 2 == 0)
 			{
 				if (monster.defense - user.attack >= 0)
 				{
 					monster.defense = monster.defense - user.attack;
+					fill();
 				}
 				else {
 					if (monster.life > 1)
 					{
 						monster.life = monster.life - 1;
+						monster.defense = random(def - 10);
+						fill();
 					}
 					else {
 						user.money = user.money + monster.money;
-						Navigation.PushModalAsync(new MainInfo(user, 1));
+
+						await Navigation.PushModalAsync(new MainInfo(user, true));
 					}
 				}
 			}
@@ -55,33 +63,42 @@ namespace DnD
 				if (user.defense - monster.attack >= 0)
 				{
 					user.defense = user.defense - monster.attack;
+					fill();
 				}
 				else {
 					if (user.life > 1)
 					{
 						user.life = user.life - 1;
+						user.defense = random(def - 10);
+						fill();
 					}
 					else {
-						Navigation.PushModalAsync(new MainInfo(user, 0));
+						
+						await Navigation.PushModalAsync(new MainInfo(user, false));
 					}
 				}
 			}
 		}
 
 
-		public void defense(object sender, EventArgs args)
+		public async void defense(object sender, EventArgs args)
 		{
+			loop = loop + 1;
 			if (user.defense - monster.attack >= 0)
 			{
 				user.defense = user.defense - monster.attack;
+				fill();
 			}
 			else {
 				if (user.life > 1)
 				{
 					user.life = user.life - 1;
+					user.defense = random(def - 10);
+					fill();
 				}
 				else {
-					Navigation.PushModalAsync(new MainInfo(user, 0));
+					
+					await Navigation.PushModalAsync(new MainInfo(user, false));
 				}
 			}
 		}
@@ -109,7 +126,13 @@ namespace DnD
 			{
 				if (min == 0 && max == 1)
 				{
-					return rnd.Next() % 2;
+					if (rnd.Next() % 2 == 1)
+					{
+						return rnd.Next() % 2;
+					}
+					else {
+						return 0;
+					}
 				}
 				else {
 					return rnd.Next(min, max);
