@@ -5,10 +5,6 @@ namespace DnD
 	{
 		public int win { get; set; }
 		public int lost { get; set; }
-		public User()
-		{
-
-		}
 
 		public override string ToString()
 		{

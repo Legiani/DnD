@@ -23,7 +23,7 @@
 						<ColumnDefinition Width="*"/>
 				    </Grid.ColumnDefinitions>
 
-					<Label Text="Uložené" FontSize="25" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+					<Label x:Name="dd" Text="Uložené" FontSize="25" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
 					<Button Clicked="add" FontSize="20" Text="Noví hráč (+)" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" />
 			</Grid>	
 			

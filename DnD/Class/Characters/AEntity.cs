@@ -9,8 +9,5 @@ namespace DnD
 		public int life { get; set; }
 		public int money { get; set; }
 
-		public Entity()
-		{
-		}
 	}
 }

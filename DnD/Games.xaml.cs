@@ -16,7 +16,8 @@ public partial class Games : ContentPage
 		{
 			InitializeComponent();
 
-			List<Game> game = CreateSampleData();
+
+			List<Game> game = CreateSampleData(user.name);
 			SetListViewItems(game);
 
 			//string dataToWrite = _jsonHelper.SerializeObject(user);
@@ -25,7 +26,7 @@ public partial class Games : ContentPage
 			this.user = user;
 		}
 
-		private List<Game> CreateSampleData()
+		private List<Game> CreateSampleData(string owner)
 		{
 			List<Game> story = new List<Game>();
 
@@ -34,8 +35,8 @@ public partial class Games : ContentPage
 								{ 1, 3 }
 							  };
 
-			story.Add(new Game() { Owner = this.user.name, Name = "Derpice", Story = storryID, CreateTime = new DateTime() });
-			story.Add(new Game() { Owner = user.name, Name = "Startov", Story = storryID, CreateTime = new DateTime() });
+			story.Add(new Game() { Owner = owner, Name = "Derpice", Story = storryID, CreateTime = new DateTime() });
+			story.Add(new Game() { Owner = owner, Name = "Startov", Story = storryID, CreateTime = new DateTime() });
 			return story;
 		}
 
@@ -61,8 +62,8 @@ public partial class Games : ContentPage
 
 		public void StoriesSelect(object sender, ItemTappedEventArgs args)
 		{
-			var user = args.Item as User;
-			this.Navigation.PushModalAsync(new Games(user));
+			var user = args.Item as Game;
+			this.Navigation.PushModalAsync(new Welcome());
 		}
 
 		public void add(object sender, EventArgs args)

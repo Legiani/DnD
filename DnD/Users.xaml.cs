@@ -52,7 +52,7 @@ namespace DnD
 		public void PlayerSelect(object sender, ItemTappedEventArgs args)
 		{
 			var user = args.Item as User;
-			 this.Navigation.PushModalAsync(new Games(user));
+			this.Navigation.PushModalAsync(new Games(user));
 		}
 
 		public void add(object sender, EventArgs args)
