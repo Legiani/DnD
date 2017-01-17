@@ -10,9 +10,13 @@ public partial class Games : ContentPage
 		//readonly JsonFile _jsonFileProvider = new JsonFile();
 		//readonly JsonHelper _jsonHelper = new JsonHelper();
 
+
 		User user;
 		Game game;
-
+		/// <summary>
+		/// Inicializuje novou instanci se vstupem user zakládá game
+		/// </summary>
+		/// <param name="user">User.</param>
 		public Games(User user)
 		{
 			InitializeComponent();
@@ -28,6 +32,11 @@ public partial class Games : ContentPage
 
 		}
 
+		/// <summary>
+		/// Generuje list s daty o hře
+		/// </summary>
+		/// <returns>The sample data.</returns>
+		/// <param name="owner">Owner.</param>
 		private List<Game> CreateSampleData(string owner)
 		{
 			List<Game> story = new List<Game>();
@@ -48,6 +57,10 @@ public partial class Games : ContentPage
 		//	SetListViewItems(user);
 		//}
 
+		/// <summary>
+		/// Výpíše informace o hře do ListView
+		/// </summary>
+		/// <param name="story">Story.</param>
 		private void SetListViewItems(List<Game> story)
 		{
 			StoriesList.ItemsSource = story;
@@ -62,12 +75,22 @@ public partial class Games : ContentPage
 		//	return _jsonHelper.DeserializeObject(dataFromFile);
 		//}
 
+		/// <summary>
+		/// Odkaz tlačítka na hlavní stranku
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="args">Arguments.</param>
 		public void StoriesSelect(object sender, ItemTappedEventArgs args)
 		{
 			Game game = args.Item as Game;
 			this.Navigation.PushModalAsync(new MainStory(user, game));
 		}
 
+		/// <summary>
+		/// Přidání nové hry
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="args">Arguments.</param>
 		public void add(object sender, EventArgs args)
 		{
 			//this.Navigation.PushModalAsync(new vyberHrace());

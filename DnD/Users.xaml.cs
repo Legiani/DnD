@@ -10,6 +10,9 @@ namespace DnD
 		//readonly JsonFile _jsonFileProvider = new JsonFile();
 		//readonly JsonHelper _jsonHelper = new JsonHelper();
 
+		/// <summary>
+		/// Inicalizuje třídu vytváří "user"
+		/// </summary>
 		public Users()
 		{
 			InitializeComponent();
@@ -21,6 +24,10 @@ namespace DnD
 			//ReadAndWriteData(dataToWrite);
 		}
 
+		/// <summary>
+		/// Generuje List hráču
+		/// </summary>
+		/// <returns>The sample data.</returns>
 		private List<User> CreateSampleData()
 		{
 			List<User> persons = new List<User>();
@@ -35,6 +42,10 @@ namespace DnD
 		//	SetListViewItems(user);
 		//}
 
+		/// <summary>
+		/// Vypisuje list hráču do ListView
+		/// </summary>
+		/// <param name="persons">Persons.</param>
 		private void SetListViewItems(List<User> persons)
 		{
 			PlayersList.ItemsSource = persons;
@@ -49,6 +60,11 @@ namespace DnD
 		//	return _jsonHelper.DeserializeObject(dataFromFile);
 		//}
 
+		/// <summary>
+		/// Odkaz na víber hry s vybraným hráčem
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="args">Arguments.</param>
 		public async void PlayerSelect(object sender, ItemTappedEventArgs args)
 		{
 			var user = args.Item as User;
@@ -56,7 +72,11 @@ namespace DnD
 		}
 
 
-
+		/// <summary>
+		/// Noví hráč/postava
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="args">Arguments.</param>
 		public void add(object sender, EventArgs args)
 		{
 			this.Navigation.PushAsync(new Welcome());

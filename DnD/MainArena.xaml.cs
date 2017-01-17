@@ -8,9 +8,17 @@ namespace DnD
 	public partial class MainArena : ContentPage
 	{
 		User user;
+
+		//počet kol duelu
 		int loop;
 		Monster monster;
+
+		//zakladní obrana toho boje
 		int def;
+		/// <summary>
+		///  Inicializuje novou instanci se vstupem user
+		/// </summary>
+		/// <param name="user">User.</param>
 		public MainArena(User user)
 		{
 			InitializeComponent();
@@ -21,6 +29,10 @@ namespace DnD
 			fill();
 
 		}
+
+		/// <summary>
+		/// Vloží data do stránk XAML
+		/// </summary>
 		public void fill() {
 			monster1.Text = monster.name;
 			player.Text = user.name;
@@ -35,6 +47,11 @@ namespace DnD
 
 		}
 
+		/// <summary>
+		/// Pokus o utok muře a nemusí vijít na zakladě náhody
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="args">Arguments.</param>
 		public async void attack(object sender, EventArgs args)
 		{
 			loop = loop + 1;
@@ -80,7 +97,11 @@ namespace DnD
 			}
 		}
 
-
+		/// <summary>
+		/// Pokus o obranu muře a nemusí vijít na zakladě náhody
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="args">Arguments.</param>
 		public async void defense(object sender, EventArgs args)
 		{
 			loop = loop + 1;
@@ -103,6 +124,10 @@ namespace DnD
 			}
 		}
 
+		/// <summary>
+		/// Výstupem je nahodné jméno z Listu names
+		/// </summary>
+		/// <returns>The name.</returns>
 		public string randomName() { 
 			List<string> names = new List<string>();
 
@@ -120,6 +145,12 @@ namespace DnD
 
 		}
 
+		/// <summary>
+		/// Upravení funkce pro lepší práci 
+		/// </summary>
+		/// <param name="cca">vyhodí náhodné číslo +-10 od puvodního</param>
+		/// <param name="min">Minimum.</param>
+		/// <param name="max">Max.</param>
 		public int random(int cca = 0, int min = 0, int max = 0) { 
 			Random rnd = new Random();
 			if (cca == 0)

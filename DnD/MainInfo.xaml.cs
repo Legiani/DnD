@@ -8,8 +8,14 @@ namespace DnD
 	public partial class MainInfo : ContentPage
 	{
 		User user;
+		//promená se stavem víhra/prohra
 		bool v;
 
+		/// <summary>
+		///  Inicializuje novou instanci se vstupem "user", a "v" vyhra/prohra 
+		/// </summary>
+		/// <param name="user">User.</param>
+		/// <param name="v">If set to <c>true -> výhra</c></c> v.</param>
 		public MainInfo(User user, bool v)
 		{
 			InitializeComponent();
@@ -17,9 +23,12 @@ namespace DnD
 			this.user = user;
 			this.v = v;
 
+
 			fill();
 		}
-
+		/// <summary>
+		/// Výpis do XAML
+		/// </summary>
 		public void fill()
 		{
 			player.Text = user.name;
@@ -36,7 +45,11 @@ namespace DnD
 			}
 
 		}
-
+		/// <summary>
+		/// Návrat do menu
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="args">Arguments.</param>
 		public void menu(object sender, EventArgs args)
 		{
 			Game game = new Game();

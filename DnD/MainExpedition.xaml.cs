@@ -8,13 +8,21 @@ namespace DnD
 	public partial class MainExpedition : ContentPage
 	{
 		User user;
-
+		/// <summary>
+		///  Inicializuje novou instanci se vstupem user 
+		/// </summary>
+		/// <param name="user">User.</param>
 		public MainExpedition(User user)
 		{
 			InitializeComponent();
 			this.user = user;
 		}
 
+		/// <summary>
+		/// Vrátí se zpět do menu
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="args">Arguments.</param>
 		public async void expedition(object sender, EventArgs args)
 		{
 			Game game = new Game();
