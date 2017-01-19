@@ -33,7 +33,7 @@ namespace DnD
 		public async void expedition(object sender, EventArgs args)
 		{
 			
-			await Navigation.PushAsync(new MainExpedition(user));
+			await Navigation.PushModalAsync(new MainExpedition(user));
 		}
 
 		/// <summary>
@@ -63,7 +63,7 @@ namespace DnD
 		/// <param name="args">Arguments.</param>
 		public async void shop(object sender, EventArgs args)
 		{
-			await Navigation.PushAsync(new MainShop(user));
+			await Navigation.PushModalAsync(new MainShop(user));
 		}
 
 

@@ -23,10 +23,10 @@ namespace DnD
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		/// <param name="args">Arguments.</param>
-		public async void expedition(object sender, EventArgs args)
+		public async void menu(object sender, EventArgs args)
 		{
 			Game game = new Game();
-			await Navigation.PushAsync(new MainStory(user, game));
+			await Navigation.PushModalAsync(new MainStory(user, game));
 		}
 	}
 }
