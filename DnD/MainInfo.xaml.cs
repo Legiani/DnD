@@ -52,8 +52,7 @@ namespace DnD
 		/// <param name="args">Arguments.</param>
 		public void menu(object sender, EventArgs args)
 		{
-			Game game = new Game();
-			Navigation.PushModalAsync(new MainStory(user, game));
+			Navigation.PushModalAsync(new MainStory(user));
 		}
 	}
 }

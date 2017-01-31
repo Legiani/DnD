@@ -8,19 +8,17 @@ namespace DnD
 	public partial class MainStory : ContentPage
 	{
 		User user;
-		Game game;
 
 		/// <summary>
 		/// Inicializuje novou instanci se vstupem "user" a "game"
 		/// </summary>
 		/// <param name="user">User.</param>
-		/// <param name="game">Game.</param>
-		public MainStory(User user, Game game)
+		public MainStory(User user)
 		{
 			InitializeComponent();
 
 			this.user = user;
-			this.game = game;
+		
 
 			player.Text = user.name;
 		}
@@ -51,9 +49,9 @@ namespace DnD
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		/// <param name="args">Arguments.</param>
-		public async void games(object sender, EventArgs args)
+		public async void players(object sender, EventArgs args)
 		{
-			await Navigation.PushModalAsync(new Games(user));
+			await Navigation.PushModalAsync(new Users());
 		}
 
 		/// <summary>

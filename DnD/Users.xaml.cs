@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Diagnostics;
 using Xamarin.Forms;
 
 namespace DnD
@@ -17,8 +17,16 @@ namespace DnD
 		{
 			InitializeComponent();
 
+			var dbConnection = App.Database;
+
 			List<User> user = CreateSampleData();
-			SetListViewItems(user);
+
+			App.Database.SaveItemAsync((DnD.User)user);
+
+			SetListViewItems(App.Database.GetItemsAsync().Result);
+
+
+
 
 			//string dataToWrite = _jsonHelper.SerializeObject(user);
 			//ReadAndWriteData(dataToWrite);
@@ -68,7 +76,7 @@ namespace DnD
 		public async void PlayerSelect(object sender, ItemTappedEventArgs args)
 		{
 			var user = args.Item as User;
-			await Navigation.PushModalAsync(new Games(user));
+			await Navigation.PushModalAsync(new MainStory(user));
 		}
 
 

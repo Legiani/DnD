@@ -1,9 +1,12 @@
-﻿using Xamarin.Forms;
+﻿using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace DnD
 {
 	public partial class App : Application
 	{
+		public User player;
+
 		public App()
 		{
 			InitializeComponent();
@@ -24,6 +27,19 @@ namespace DnD
 		protected override void OnResume()
 		{
 			// Handle when your app resumes
+		}
+		private static UsersDatabase _database;
+
+		public static UsersDatabase Database
+		{
+			get
+			{
+				if (_database == null)
+				{
+					_database = new UsersDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TodoSQLite.db3"));
+				}
+				return _database;
+			}
 		}
 	}
 }

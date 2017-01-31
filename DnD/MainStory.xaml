@@ -15,7 +15,7 @@
 <!--					AbsoluteLayout.LayoutBounds="40,240,250,100"  -->
 				<Button Clicked="arena" FontSize="25" Text="Arena" FontFamily="Didot" FontAttributes="Bold" TextColor="Black" />
 <!--					AbsoluteLayout.LayoutBounds="-23,-200,250,100"  -->
-				<Button Clicked="games" FontSize="25" Text="Menu" FontFamily="Didot" FontAttributes="Bold" TextColor="Black" />
+				<Button Clicked="players" FontSize="25" Text="Menu" FontFamily="Didot" FontAttributes="Bold" TextColor="Black" />
 <!--					AbsoluteLayout.LayoutBounds="190, 200,250,100"  -->
 
 <!--		  	</AbsoluteLayout>-->
