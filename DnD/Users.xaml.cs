@@ -15,40 +15,25 @@ namespace DnD
 		/// </summary>
 		public Users()
 		{
-			InitializeComponent();
+			//InitializeComponent();
 
+			//var dbConnection = App.Database;
+
+
+			//UsersDatabase usersDatabase = App.Database;
+			//User user = new User() { name = "Derpos", attack = 3, defense = 85, life = 6, money = 50, lost = 6, win = 12, ID = 1 };
+			//App.Database.SaveItemAsync(user);
+			//SetListViewItems(App.Database.GetItemsAsync().Result);
+			InitializeComponent();
 			var dbConnection = App.Database;
 
-			List<User> user = CreateSampleData();
+			UsersDatabase userDatabase = App.Database;
+			User item = new User();
+			item.name = "item";
+			item.money = 42;
+			App.Database.SaveItemAsync(item);
 
-			App.Database.SaveItemAsync((DnD.User)user);
-
-			SetListViewItems(App.Database.GetItemsAsync().Result);
-
-
-
-
-			//string dataToWrite = _jsonHelper.SerializeObject(user);
-			//ReadAndWriteData(dataToWrite);
 		}
-
-		/// <summary>
-		/// Generuje List hráču
-		/// </summary>
-		/// <returns>The sample data.</returns>
-		private List<User> CreateSampleData()
-		{
-			List<User> persons = new List<User>();
-			persons.Add(new User() { name = "Bára", attack = 3, defense = 85, life = 6, money = 50, lost = 6, win = 12 });
-			persons.Add(new User() { name = "Kuba", attack = 30, defense = 55, life = 4, money = 130, lost = 2, win = 22 });
-			return persons;
-		}
-
-		//private void ReadAndWriteData(string dataToWrite)
-		//{
-		//	List<User> user = Task.Run(() => ReadAndWriteAsync(dataToWrite)).Result;
-		//	SetListViewItems(user);
-		//}
 
 		/// <summary>
 		/// Vypisuje list hráču do ListView

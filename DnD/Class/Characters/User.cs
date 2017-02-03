@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using SQLite;
 
 namespace DnD
 {
 	public class User : Entity
 	{
+		[PrimaryKey, AutoIncrement]
 		public int win { get; set; }
 		public int lost { get; set; }
 
 		public override string ToString()
 		{
-			return win + " " + lost + " " + life + " " + name+ "" + attack + "" + defense;
-		}
-
-		public static explicit operator User(List<User> v)
-		{
-			throw new NotImplementedException();
+			return ID + " " + win + " " + lost + " " + life + " " + name+ "" + attack + "" + defense + "" + money;
 		}
 	}
 }

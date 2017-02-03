@@ -36,7 +36,7 @@ namespace DnD
 			{
 				if (_database == null)
 				{
-					_database = new UsersDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TodoSQLite.db3"));
+					_database = new UsersDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("User.db3"));
 				}
 				return _database;
 			}

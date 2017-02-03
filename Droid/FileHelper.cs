@@ -5,8 +5,7 @@ using DnD.Droid;
 [assembly: Dependency(typeof(FileHelper))]
 namespace DnD.Droid
 {
-	public class FileHelper
-	{
+
 		public class FileHelper : IFileHelper
 		{
 			public string GetLocalFilePath(string filename)
@@ -15,5 +14,5 @@ namespace DnD.Droid
 				return Path.Combine(path, filename);
 			}
 		}
-	}
+
 }
