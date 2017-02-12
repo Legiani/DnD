@@ -5,7 +5,7 @@ namespace DnD
 {
 	public partial class App : Application
 	{
-		public User player;
+		public static User player;
 
 		public App()
 		{

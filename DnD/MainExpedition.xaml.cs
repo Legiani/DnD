@@ -7,15 +7,15 @@ namespace DnD
 {
 	public partial class MainExpedition : ContentPage
 	{
-		User user;
+		
 		/// <summary>
 		///  Inicializuje novou instanci se vstupem user 
 		/// </summary>
 		/// <param name="user">User.</param>
-		public MainExpedition(User user)
+		public MainExpedition()
 		{
 			InitializeComponent();
-			this.user = user;
+	
 		}
 
 		/// <summary>
@@ -25,7 +25,7 @@ namespace DnD
 		/// <param name="args">Arguments.</param>
 		public async void menu(object sender, EventArgs args)
 		{
-			await Navigation.PushModalAsync(new MainStory(user));
+			await Navigation.PushModalAsync(new MainStory());
 		}
 	}
 }

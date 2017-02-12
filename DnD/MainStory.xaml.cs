@@ -7,20 +7,20 @@ namespace DnD
 {
 	public partial class MainStory : ContentPage
 	{
-		User user;
+		
 
 		/// <summary>
 		/// Inicializuje novou instanci se vstupem "user" a "game"
 		/// </summary>
 		/// <param name="user">User.</param>
-		public MainStory(User user)
+		public MainStory()
 		{
 			InitializeComponent();
 
-			this.user = user;
+
 		
 
-			player.Text = user.name;
+			player.Text = App.player.name;
 		}
 
 		/// <summary>
@@ -31,7 +31,7 @@ namespace DnD
 		public async void expedition(object sender, EventArgs args)
 		{
 			
-			await Navigation.PushModalAsync(new MainExpedition(user));
+			await Navigation.PushModalAsync(new MainExpedition());
 		}
 
 		/// <summary>
@@ -41,7 +41,7 @@ namespace DnD
 		/// <param name="args">Arguments.</param>
 		public async void arena(object sender, EventArgs args)
 		{
-			await Navigation.PushModalAsync(new MainArena(user));
+			await Navigation.PushModalAsync(new MainArena());
 		}
 
 		/// <summary>
@@ -61,7 +61,7 @@ namespace DnD
 		/// <param name="args">Arguments.</param>
 		public async void shop(object sender, EventArgs args)
 		{
-			await Navigation.PushModalAsync(new MainShop(user));
+			await Navigation.PushModalAsync(new MainShop());
 		}
 
 

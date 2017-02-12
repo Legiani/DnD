@@ -7,7 +7,7 @@ namespace DnD
 {
 	public partial class MainInfo : ContentPage
 	{
-		User user;
+
 		//promená se stavem víhra/prohra
 		bool v;
 
@@ -16,27 +16,26 @@ namespace DnD
 		/// </summary>
 		/// <param name="user">User.</param>
 		/// <param name="v">If set to <c>true -> výhra</c></c> v.</param>
-		public MainInfo(User user, bool v)
+		public MainInfo(bool v)
 		{
 			InitializeComponent();
 
-			this.user = user;
 			this.v = v;
 
 
-			fill();
+
 		}
 		/// <summary>
 		/// Výpis do XAML
 		/// </summary>
 		public void fill()
 		{
-			player.Text = user.name;
+			player.Text = App.player.name;
 
-			p_life.Text = "" + user.life;
-			p_attack.Text = "" + user.attack;
-			p_defense.Text = "" + user.defense;
-			p_money.Text = "" + user.money;
+			p_life.Text = "" + App.player.life;
+			p_attack.Text = "" + App.player.attack;
+			p_defense.Text = "" + App.player.defense;
+			p_money.Text = "" + App.player.money;
 
 			if (v) {
 				result.Text = "Víhra";
@@ -52,7 +51,7 @@ namespace DnD
 		/// <param name="args">Arguments.</param>
 		public void menu(object sender, EventArgs args)
 		{
-			Navigation.PushModalAsync(new MainStory(user));
+			Navigation.PushModalAsync(new MainStory());
 		}
 	}
 }

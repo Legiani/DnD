@@ -10,12 +10,14 @@ namespace DnD
 	public class User : Entity
 	{
 		[PrimaryKey, AutoIncrement]
+		public int ID { get; set; }
 		public int win { get; set; }
 		public int lost { get; set; }
+		public string focus { get; set; }
 
 		public override string ToString()
 		{
-			return ID + " " + win + " " + lost + " " + life + " " + name+ "" + attack + "" + defense + "" + money;
+			return ID + " " + win + " " + lost + " " + life + " " + name+ "" + attack + "" + defense + "" + money+ "" +focus;
 		}
 	}
 }

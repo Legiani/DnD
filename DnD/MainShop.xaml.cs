@@ -7,15 +7,15 @@ namespace DnD
 {
 	public partial class MainShop : ContentPage
 	{
-		User user;
+		
 		/// <summary>
 		///  Inicializuje novou instanci se vstupem "user"
 		/// </summary>
 		/// <param name="user">User.</param>
-		public MainShop(User user)
+		public MainShop()
 		{
 			InitializeComponent();
-			this.user = user;
+
 		}
 
 		/// <summary>
@@ -26,7 +26,7 @@ namespace DnD
 		public async void menu(object sender, EventArgs args)
 		{
 			
-			await Navigation.PushModalAsync(new MainStory(user));
+			await Navigation.PushModalAsync(new MainStory());
 		}
 	}
 }

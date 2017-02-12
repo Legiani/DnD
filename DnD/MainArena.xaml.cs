@@ -7,7 +7,7 @@ namespace DnD
 {
 	public partial class MainArena : ContentPage
 	{
-		User user;
+		
 
 		//počet kol duelu
 		int loop;
@@ -19,13 +19,13 @@ namespace DnD
 		///  Inicializuje novou instanci se vstupem user
 		/// </summary>
 		/// <param name="user">User.</param>
-		public MainArena(User user)
+		public MainArena()
 		{
 			InitializeComponent();
-			this.user = user;
+		
 
-			def = user.defense;
-			monster = new Monster() { name=randomName(), attack=random(user.attack-10), defense=random(user.defense - 10), life=random(0,1,3), money=random(0,2,5) };
+			def = App.player.defense;
+			monster = new Monster() { name=randomName(), attack=random(App.player.attack-10), defense=random(App.player.defense - 10), life=random(0,1,3), money=random(0,2,5) };
 			fill();
 
 		}
@@ -35,11 +35,11 @@ namespace DnD
 		/// </summary>
 		public void fill() {
 			monster1.Text = monster.name;
-			player.Text = user.name;
+			player.Text = App.player.name;
 
-			p_life.Text = "" + user.life;
-			p_attack.Text = "" + user.attack;
-			p_defense.Text = "" + user.defense;
+			p_life.Text = "" + App.player.life;
+			p_attack.Text = "" + App.player.attack;
+			p_defense.Text = "" + App.player.defense;
 
 			m_life.Text = "" + monster.life;
 			m_attack.Text = "" + monster.attack;
@@ -57,9 +57,9 @@ namespace DnD
 			loop = loop + 1;
 			if (random(0, 0, 1) == 1 || loop % 2 == 0)
 			{
-				if (monster.defense - user.attack >= 0)
+				if (monster.defense - App.player.attack >= 0)
 				{
-					monster.defense = monster.defense - user.attack;
+					monster.defense = monster.defense - App.player.attack;
 					fill();
 				}
 				else {
@@ -70,28 +70,28 @@ namespace DnD
 						fill();
 					}
 					else {
-						user.money = user.money + monster.money;
+						App.player.money = App.player.money + monster.money;
 
-						await Navigation.PushModalAsync(new MainInfo(user, true));
+						await Navigation.PushModalAsync(new MainInfo(true));
 					}
 				}
 			}
 			else{
-				if (user.defense - monster.attack >= 0)
+				if (App.player.defense - monster.attack >= 0)
 				{
-					user.defense = user.defense - monster.attack;
+					App.player.defense = App.player.defense - monster.attack;
 					fill();
 				}
 				else {
-					if (user.life > 1)
+					if (App.player.life > 1)
 					{
-						user.life = user.life - 1;
-						user.defense = random(def - 10);
+						App.player.life = App.player.life - 1;
+						App.player.defense = random(def - 10);
 						fill();
 					}
 					else {
 						
-						await Navigation.PushModalAsync(new MainInfo(user, false));
+						await Navigation.PushModalAsync(new MainInfo(false));
 					}
 				}
 			}
@@ -105,21 +105,21 @@ namespace DnD
 		public async void defense(object sender, EventArgs args)
 		{
 			loop = loop + 1;
-			if (user.defense - monster.attack >= 0)
+			if (App.player.defense - monster.attack >= 0)
 			{
-				user.defense = user.defense - monster.attack;
+				App.player.defense = App.player.defense - monster.attack;
 				fill();
 			}
 			else {
-				if (user.life > 1)
+				if (App.player.life > 1)
 				{
-					user.life = user.life - 1;
-					user.defense = random(def - 10);
+					App.player.life = App.player.life - 1;
+					App.player.defense = random(def - 10);
 					fill();
 				}
 				else {
 					
-					await Navigation.PushModalAsync(new MainInfo(user, false));
+					await Navigation.PushModalAsync(new MainInfo(false));
 				}
 			}
 		}
