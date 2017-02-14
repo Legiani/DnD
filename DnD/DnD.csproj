@@ -53,6 +53,18 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Start\App.xaml" />
+    <EmbeddedResource Include="Question\Shoper.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\Crossroads.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\City.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\Monster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +102,18 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Story.cs" />
+    <Compile Include="Question\Shoper.xaml.cs">
+      <DependentUpon>Shoper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Question\Crossroads.xaml.cs">
+      <DependentUpon>Crossroads.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Question\City.xaml.cs">
+      <DependentUpon>City.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Question\Monster.xaml.cs">
+      <DependentUpon>Monster.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -121,6 +145,7 @@
     <Folder Include="Class\" />
     <Folder Include="Class\Characters\" />
     <Folder Include="Start\" />
+    <Folder Include="Question\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
