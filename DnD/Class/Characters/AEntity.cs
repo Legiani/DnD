@@ -10,5 +10,8 @@ namespace DnD
 		public int life { get; set; }
 		public int money { get; set; }
 
+		public int lvl { get; set; }
+		public int exp { get; set; }
+
 	}
 }

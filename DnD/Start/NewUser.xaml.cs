@@ -145,6 +145,9 @@ namespace DnD
 
 			if (user.name != null && user.focus != null && Free == 0) {
 				saveEnable.IsEnabled = true;
+			}else
+			{
+				saveEnable.IsEnabled = false;
 			}
 		}
 

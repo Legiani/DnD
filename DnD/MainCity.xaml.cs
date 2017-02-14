@@ -5,24 +5,15 @@ using Xamarin.Forms;
 
 namespace DnD
 {
-	public partial class MainStory : ContentPage
+	public partial class MainCity : ContentPage
 	{
-		
-
-		/// <summary>
-		/// Inicializuje novou instanci se vstupem "user" a "game"
-		/// </summary>
-		/// <param name="user">User.</param>
-		public MainStory()
+		public MainCity()
 		{
 			InitializeComponent();
 
-
-		
-
 			player.Text = App.player.name;
-		}
 
+		}
 		/// <summary>
 		/// Odkaz na stranku MainExpedition
 		/// </summary>
@@ -30,7 +21,7 @@ namespace DnD
 		/// <param name="args">Arguments.</param>
 		public async void expedition(object sender, EventArgs args)
 		{
-			
+
 			await Navigation.PushModalAsync(new MainExpedition());
 		}
 
@@ -63,7 +54,5 @@ namespace DnD
 		{
 			await Navigation.PushModalAsync(new MainShop());
 		}
-
-
 	}
 }

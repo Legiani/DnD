@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-			x:Class="DnD.MainStory">
-	<ContentPage.Content>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DnD.MainCity">
+		<ContentPage.Content>
 		 <StackLayout>
 			<Label Text="Vítej ve Vodňanech" HorizontalOptions="Center" FontSize="30" FontFamily="Didot" FontAttributes="Bold" Margin="0,20,0,0"/>
 			<Label Text="Player" HorizontalOptions="Center" FontSize="12" FontFamily="Didot" Margin="0,-5,0,10" x:Name="player"/>
