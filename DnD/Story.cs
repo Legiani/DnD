@@ -8,8 +8,6 @@ namespace DnD
 		public Story()
 		{
 
-			showPageCommand(new MainShop());
-
 		}
 
 		public Page getStory()
@@ -20,16 +18,35 @@ namespace DnD
 			switch (rnd.Next(0, 5))
 			{
 				case 1:
-					Console.WriteLine("Case 1");
-					break;
+					return new City();
 				case 2:
-					Console.WriteLine("Case 2");
-					break;
+					return new Entity();
+				case 3:
+					return new Shoper();
 				default:
-					Console.WriteLine("Default case");
-					break;
+					return new Crossroads();
 			}
 
 		}
+
+		public string gerDirection() 
+		{ 
+			Random rnd = new Random();
+			int month = rnd.Next(0, 3);
+
+			switch (rnd.Next(0, 5))
+			{
+				case 0:
+					return "vpravo";
+				case 1:
+					return "vlevo";
+				case 2:
+					return "vpřed";
+				default:
+					return "vpřed";
+			}
+		}
+
+
 	}
 }

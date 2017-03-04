@@ -7,6 +7,7 @@ namespace DnD
 {
 	public partial class MainCity : ContentPage
 	{
+		Story story = new Story();
 		public MainCity()
 		{
 			InitializeComponent();
@@ -22,7 +23,7 @@ namespace DnD
 		public async void expedition(object sender, EventArgs args)
 		{
 
-			await Navigation.PushModalAsync(new MainExpedition());
+			await Navigation.PushModalAsync(story.getStory());
 		}
 
 		/// <summary>

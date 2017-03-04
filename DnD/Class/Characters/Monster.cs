@@ -1,7 +1,7 @@
 ﻿using System;
 namespace DnD
 {
-	public class Monster : Entity
+	public class Monster : AEntity
 	{
 		public Monster()
 		{

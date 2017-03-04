@@ -7,7 +7,7 @@ using SQLite;
 
 namespace DnD
 {
-	public class User : Entity
+	public class User : AEntity
 	{
 		[PrimaryKey, AutoIncrement]
 		public int ID { get; set; }

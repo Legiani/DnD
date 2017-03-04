@@ -8,6 +8,7 @@ namespace DnD
 {
 	public partial class Users : ContentPage
 	{
+		Story story = new Story();
 		/// <summary>
 		/// Inicalizuje třídu vytváří "user"
 		/// </summary>
@@ -29,15 +30,6 @@ namespace DnD
 			PlayersList.ItemsSource = persons;
 		}
 
-
-		//private async Task<List<User>> ReadAndWriteAsync(string dataToWrite)
-		//{
-		//	await _jsonFileProvider.WriteDataAsync(dataToWrite);
-		//	string dataFromFile = await _jsonFileProvider.ReadDataAsync();
-
-		//	return _jsonHelper.DeserializeObject(dataFromFile);
-		//}
-
 		/// <summary>
 		/// Odkaz na víber hry s vybraným hráčem
 		/// </summary>
@@ -46,7 +38,7 @@ namespace DnD
 		public async void PlayerSelect(object sender, ItemTappedEventArgs args)
 		{
 			App.player = args.Item as User;
-			await Navigation.PushModalAsync(new MainStory());
+			await Navigation.PushModalAsync(story.getStory());
 		}
 
 

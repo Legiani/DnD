@@ -26,7 +26,7 @@ namespace DnD
 		public async void menu(object sender, EventArgs args)
 		{
 			
-			await Navigation.PushModalAsync(new MainStory());
+			await Navigation.PopModalAsync();
 		}
 	}
 }

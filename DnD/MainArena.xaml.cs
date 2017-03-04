@@ -72,7 +72,7 @@ namespace DnD
 					else {
 						App.player.money = App.player.money + monster.money;
 
-						await Navigation.PushModalAsync(new MainInfo(true));
+						await Navigation.PushModalAsync(new MainInfo());
 					}
 				}
 			}
@@ -91,7 +91,7 @@ namespace DnD
 					}
 					else {
 						
-						await Navigation.PushModalAsync(new MainInfo(false));
+						await Navigation.PushModalAsync(new MainInfo());
 					}
 				}
 			}
@@ -119,7 +119,7 @@ namespace DnD
 				}
 				else {
 					
-					await Navigation.PushModalAsync(new MainInfo(false));
+					await Navigation.PushModalAsync(new MainInfo());
 				}
 			}
 		}

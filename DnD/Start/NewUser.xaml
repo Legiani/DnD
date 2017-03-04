@@ -58,16 +58,16 @@
 						<Button Grid.Row="0" Grid.Column="1" BackgroundColor="Green" TextColor="White" Text="Scan" Clicked="Warrior" BorderRadius="30">
 				        <Button.Image>
 				            <OnPlatform x:TypeArguments="FileImageSource"
-				                    iOS="Magic.png"
-				                    Android="Magic.png" />
+				                    iOS="Fighter.png"
+				                    Android="Fighter.png" />
 				          </Button.Image>
 				        </Button>
 				
 						<Button Grid.Row="0" Grid.Column="2" BackgroundColor="Green" TextColor="White" Text="Scan" Clicked="Archer" BorderRadius="30">
 				        <Button.Image>
 				            <OnPlatform x:TypeArguments="FileImageSource"
-				                    iOS="Magic.png"
-				                    Android="Magic.png" />
+				                    iOS="Archer.png"
+				                    Android="Archer.png" />
 				          </Button.Image>
 				        </Button>
 				</Grid>

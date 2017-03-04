@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DnD.Entity">
+	<ContentPage.Content>
+				<StackLayout>
+						<Grid Margin="10,20,10,20">
+						    <Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+						    </Grid.RowDefinitions>
+						    <Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+						    </Grid.ColumnDefinitions>
+
+							<Label Text="Přišera" FontSize="30" FontFamily="Didot" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+							<Button Clicked="my" Text="Mí" FontSize="25" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" />
+						</Grid>	
+
+						<Grid>
+						    <Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="5*"/>
+						    </Grid.RowDefinitions>
+						    <Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+
+						    </Grid.ColumnDefinitions>
+	
+				
+							<Image Source="see_monster.png" VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="0" />
+							<Label x:Name="title" FontSize="30" FontFamily="Didot" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Center"/>
+						</Grid>	
+
+
+						<Grid Margin="10,20,10,20">
+						    <Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+						    </Grid.RowDefinitions>
+						    <Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+						    </Grid.ColumnDefinitions>
+
+							<Button Clicked="yes" Text="ANO" FontSize="25" FontFamily="Didot"  Grid.Row="0" Grid.Column="0" />
+							<Button Clicked="no" Text="NE" FontSize="25" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" />
+						</Grid>	
+			</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

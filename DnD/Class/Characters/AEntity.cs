@@ -1,7 +1,7 @@
 ﻿using System;
 namespace DnD
 {
-	public abstract class Entity
+	public abstract class AEntity
 	{
 		
 		public string name { get; set; }

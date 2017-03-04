@@ -4,7 +4,6 @@
 		<Grid>
 				    <Grid.RowDefinitions>
 						<RowDefinition Height="*"/>
-						<RowDefinition Height="0.4*"/>
 						<RowDefinition Height="3*"/>
 						<RowDefinition Height="*"/>
 				    </Grid.RowDefinitions>
@@ -13,8 +12,7 @@
 				    </Grid.ColumnDefinitions>
 
 					<Label Text="Info" FontSize="30" FontFamily="Didot" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="result"/>
-					<Label Text="xxx" FontSize="25" FontFamily="Didot" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="player"/>
-					<Grid Grid.Row="2" Grid.Column="0">
+					<Grid Grid.Row="1" Grid.Column="0">
 					    <Grid.RowDefinitions>
 							<RowDefinition Height="*"/>
 							<RowDefinition Height="*"/>
@@ -22,21 +20,26 @@
 							<RowDefinition Height="*"/>
 					    </Grid.RowDefinitions>
 					    <Grid.ColumnDefinitions>
-
+					    	<ColumnDefinition Width="0.3*"/>
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="*"/>
 					    </Grid.ColumnDefinitions>
 
-						<Label Text="Životy" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-						<Label Text="Obrana" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-						<Label Text="Útok" FontSize="20" FontFamily="Didot"  Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />						
-						<Label Text="Měšec" FontSize="20" FontFamily="Didot"  Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+						<Image Source="Life.png" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0"/>
+						<Image Source="Defense.png" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0"/>
+						<Image Source="Fighter.png" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0"/>
+						<Image Source="Shoper.png" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="0"/>
+				
+						<Label Text="Životy" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+						<Label Text="Obrana" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+						<Label Text="Útok" FontSize="20" FontFamily="Didot"  Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />						
+						<Label Text="Měšec" FontSize="20" FontFamily="Didot"  Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
 
 
-						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_defense"/>
-						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_life"/>
-						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_attack"/>
-						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_money"/>
+						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_defense"/>
+						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="1" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_life"/>
+						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="2" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_attack"/>
+						<Label Text="0" FontSize="20" FontFamily="Didot"  Grid.Row="3" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="p_money"/>
 
 					</Grid>
 
