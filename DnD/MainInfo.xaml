@@ -11,7 +11,7 @@
 						<ColumnDefinition Width="*"/>
 				    </Grid.ColumnDefinitions>
 
-					<Label Text="Info" FontSize="30" FontFamily="Didot" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="result"/>
+					<Label Text="Info" FontSize="30" FontFamily="Didot" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="name"/>
 					<Grid Grid.Row="1" Grid.Column="0">
 					    <Grid.RowDefinitions>
 							<RowDefinition Height="*"/>

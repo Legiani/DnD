@@ -17,7 +17,7 @@ namespace DnD
 		/// </summary>
 		public void fill()
 		{
-			player.Text = App.player.name;
+			name.Text = App.player.name;
 
 			p_life.Text = "" + App.player.life;
 			p_attack.Text = "" + App.player.attack;
